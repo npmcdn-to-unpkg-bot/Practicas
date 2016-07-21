@@ -1,0 +1,30 @@
+[
+    {
+    	"Id": 0,
+		"nombres" : "Alex",
+		"apellidos" : "Castillo",
+		"telefono" : "123123",
+		"materia" : "Arquitectura de Computadoras"		
+	},
+	{
+		"Id": 1,
+		"nombres" : "Daniel",
+		"apellidos" : "Betancourt",
+		"telefono" : "234234",
+		"materia" : "Programacion Avanzada"	
+	},
+	{
+		"Id": 2,
+		"nombres" : "Maria",
+		"apellidos" : "Perez",
+		"telefono" : "345345",
+		"materia" : "Contabilidad"
+	},
+	{
+		"Id": 3,
+		"nombres" : "Jose",
+		"apellidos" : "Castillo",
+		"telefono" : "456456",
+		"materia" : "Etica profesional"
+	}
+]

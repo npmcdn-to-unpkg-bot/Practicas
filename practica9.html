@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leer Json</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="js/practica9.js"></script>
+</head>
+<body ng-app="documento">
+	<br><br>
+	<div ng-controller="controlador">
+	<form>
+						<input type="text" name="nombres" placeholder="Ingrese el nombre" ng-model="nombreE"></input>
+
+						<input type="text" name="apellidos" placeholder="Ingrese los apellidos" ng-model="apellidosE"></input>
+
+						<input type="text" name="profesion" placeholder="Ingrese la profesion" ng-model="profesionE"></input>
+
+						<input type="text" name="estudios" placeholder="Ingrese los estudios" ng-model="estudiosE"></input>
+
+						<input type="text" name="cursos" placeholder="Ingrese los cursos" ng-model="cursosE"></input>
+
+						<button ng-click="agregar()" ng-disabled="!cursosE">AGREGAR</button>
+						<br>
+						<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+					</form>		
+		<table class="table table-hover">			
+			<tr><center><strong>LECTURA DE ARCHIVO JSON HTTP</strong></center></tr>
+			<tr>
+				<td><b><a href="" ng-click="ordenar('nombres')">NOMBRES</a></b></td>
+				<td><b>APELLIDOS</b></td>
+				<td><b>PROFESION</b></td>
+				<td><b>ESTUDIOS</b></td>
+				<td><b>CURSOS</b></td>
+			</tr>
+			<tr ng-repeat="fila in datos | filter:busqueda | orderBy:ordenado"> 
+				<!--aqui van los datos del documento json-->
+				<td>{{fila.Inf_Per.nombre}}</td>
+				<td>{{fila.Inf_Per.apellido}}</td>
+				<td>{{fila.Inf_Prof.profesion}}</td>
+				<td>{{fila.Inf_Prof.estudios}}</td>
+				<td>{{fila.Inf_Prof.cursos}}</td>
+			</tr>
+		</table>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica 7</title>
+	<meta charset="utf-8"></meta>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script type="text/javascript" src="angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/practica7.js"></script>
+	<script src="angular/angular-resource.js"></script>
+</head>
+<body ng-app="miApp" data-spy="scroll" data-target=".navbar" data-offset="50" >
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">LISTADO DE PRACTICAS</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          	<li><a href="#/pg1">Practica 1</a></li>
+			<li><a href="#/pg2">Practica 2</a></li>
+			<li><a href="#/pg3">Practica 3</a></li>
+			<li><a href="#/pg4">Practica 4</a></li>
+			<li><a href="#/pg5">Practica 5</a></li>
+			<li><a href="#/pg6">Practica 6</a></li>
+			<li><a href="#/pg8">Practica 8</a></li>
+			<li><a href="#/pg9">Practica 9</a></li>
+			<li><a href="#/pg10">Practica 10</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--
+<div id="section1" class="container-fluid">
+	<div ng-controller="controlador2">
+		{{nombre}}<br>
+		{{lista}}<br>
+		{{lista[1]}}<br><br>
+		{{diccionario}}<br>
+		<div ng-repeat="fila in diccionario">
+			{{fila.materia}} con {{fila.credito}} creditos<br>
+		</div>
+	</div>
+</div>
+<div id="section2" class="container-fluid">
+	<div ng-controller="controlador2">
+		{{nombre}}<br>
+		{{lista}}<br>
+		{{lista[1]}}<br><br>
+		{{diccionario}}<br>
+		<div ng-repeat="fila in diccionario">
+			{{fila.materia}} con {{fila.credito}} creditos<br>
+		</div>
+	</div>
+</div>    
+<div id="section3" class="container-fluid">
+	<div ng-controller="controlador3">
+		<br>
+		<form ng-submit="AgregarNombre()">
+			<input type="text" name="nombre" ng-model="NombreEntrada"></input>
+			<input type="submit" value="Agregar"></input>
+		</form>
+		<div ng-repeat="fila in diccionario">
+			{{fila.nombre}}
+		</div>
+		<a href="" ng-click="EliminarNombre()">Eliminar Nombres</a>
+	</div>
+</div>    
+<div id="section4" class="container-fluid">
+	<div ng-controller="controlador4">
+		
+			<center><h3>INGRESO DE DATOS</h3><br></center>
+				<form ng-submit="AgregarListado()">
+					<input type="text" name="nombre" placeholder="Nombre" ng-model="NombreEntrada"></input>
+					<input type="text" name="telefono" placeholder="Telefono" ng-model="TelefonoEntrada"></input>
+					<select ng-model="MateriaEntrada">
+						<option>Programación Avanzada</option>
+						<option>Arquitectura de Computadoras</option>
+						<option>Contabilidad de Costos</option>
+						<option>Ética Profesional</option>
+					</select>
+					<input type="submit" value="Agregar"></input>
+				</form>
+			</div>
+			<input type="text" ng-model="bus" placeholder="Buscar "></input>
+			<table>
+				<tr>
+					<td><b><a href="" ng-click="OrdenarListado('nombre')">Nombres</a></td>
+					<td><b>Telefono</td>
+					<td><b><a href="" ng-click="OrdenarListado('materia')">Materia</a></td>
+					<td><b>Opciones</td>
+				</tr>
+				<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:bus">
+					<td>{{fila.nombre | uppercase}}</td>
+					<td>{{fila.telefono}}</td>
+					<td>{{fila.materia | uppercase}}</td>
+					<td>Opciones</td>
+				</tr>
+			</table>
+			<a href="" ng-click="EliminarListado()">Eliminar Listado</a>
+	</div>    
+</div>
+<div id="section5" class="container-fluid">
+	<div ng-controller="controlador5">
+		<div class="well">
+			<center><h3>INGRESO DE DATOS</h3><br></center>
+					<form>
+						<input type="text" name="nombres" placeholder="Ingrese el nombre" ng-model="nombreEntrada"></input>
+						<input type="text" name="telefono" placeholder="Ingrese el telefono" ng-model="telefonoEntrada"></input>
+							<select ng-model="materiaEntrada">
+								<option>Eliga una materia</option>
+								<option>Programacion Avanzada</option>
+								<option>Arquitectura de Computadoras</option>
+								<option>Estadistica Inferencial</option>
+								<option>Contabilidad</option>
+								<option>Etica Profesional</option>
+							</select> 
+						<button ng-click="agregar()" ng-disabled="!telefonoEntrada">AGREGAR</button>
+						<br>
+						<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+					</form>		
+		</div><br>
+		<table class="table table-hover">
+			<tr>
+				<td><b><a href="" ng-click="ordenar('nombres')">NOMBRES</a></b></td>
+				<td><b>TELEFONO</b></td>
+				<td><b><a href="" ng-click="ordenar('materia')">MATERIA</a></b></td>
+				<td><b>OPCIONES</b></td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:busqueda">
+				<td><b>{{fila.nombres|uppercase}}</b></td>
+				<td><b>{{fila.telefono}}</b></td>
+				<td><b>{{fila.materia|uppercase}}</b></td>
+				<td><b>Opciones</b></td>
+			</tr>
+		</table>
+	</div>		
+</div>    
+<div id="section6" class="container-fluid">
+	<div ng-controller="controlador6">
+		<div class="well	">
+			<center><h3>INGRESO DE DATOS</h3><br>
+			<button ng-click="ShowForm()" ng-hide="formVisibility"> Añadir contacto </button></center>
+				<div ng-show="formVisibility">
+					<form>
+						<input type="text" name="nombres" placeholder="Ingrese el nombre" ng-model="nombreEntrada"></input>
+						<input type="text" name="telefono" placeholder="Ingrese el telefono" ng-model="telefonoEntrada"></input>
+							<select ng-model="materiaEntrada">
+								<option>Eliga una materia</option>
+								<option>Programacion Avanzada</option>
+								<option>Arquitectura de Computadoras</option>
+								<option>Estadistica Inferencial</option>
+								<option>Contabilidad</option>
+								<option>Etica Profesional</option>
+							</select> 
+						<a href="" ng-click="agregar()"><input type="submit" value="AGREGAR"></input></a>
+						<br>
+						<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+					</form>
+				</div>							
+		</div><br>
+		<table class="table table-hover">
+			<tr>
+				<td><b><a href="" ng-click="ordenar('nombres')">NOMBRES</a></b></td>
+				<td><b>TELEFONO</b></td>
+				<td><b><a href="" ng-click="ordenar('materia')">MATERIA</a></b></td>
+				<td><b>OPCIONES</b></td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:busqueda">
+				<td><b>{{fila.nombres|uppercase}}</b></td>
+				<td><b>{{fila.telefono}}</b></td>
+				<td><b>{{fila.materia|uppercase}}</b></td>
+				<td><b>Opciones</b></td>
+			</tr>
+		</table>
+	</div>		
+</div>    
+<div id="section8" class="container-fluid">
+	<div ng-controller="controlador8">		
+			<div class="well">
+				<center><b>DATOS DEL ARCHIVO JSON "DATOS" RESOURCE</b></center>
+			</div>	
+			<table class="table table-hover">		
+				<tr>
+					<td><b>ID</b></td>
+					<td><b>NOMBRES</b></td>
+					<td><b>APELLIDOS</b></td>
+					<td><b>TELEFONO</b></td>
+					<td><b>MATERIA</b></td>
+				</tr>
+				<tr ng-repeat="datos in lista">
+					<td>{{datos.Id}}</td>
+					<td>{{datos.nombres}}</td>
+					<td>{{datos.apellidos}}</td>
+					<td>{{datos.telefono}}</td>
+					<td>{{datos.materia}}</td>
+				</tr>
+			</table>		
+		</div>
+	</div> 
+</div> 
+<div id="section9" class="container-fluid">
+<div ng-controller="controlador9">
+	<div class="well">
+		<center><strong>LECTURA DE ARCHIVO JSON HTTP</strong></center>
+	</div>
+		<table class="table table-hover">			
+			<tr>
+				<td><b>NOMBRES</b></td>
+				<td><b>APELLIDOS</b></td>
+				<td><b>PROFESION</b></td>
+				<td><b>ESTUDIOS</b></td>
+				<td><b>CURSOS</b></td>
+			</tr>
+			<tr ng-repeat="fila in datos"> 
+				<td>{{fila.Inf_Per.nombre}}</td>
+				<td>{{fila.Inf_Per.apellido}}</td>
+				<td>{{fila.Inf_Prof.profesion}}</td>
+				<td>{{fila.Inf_Prof.estudios}}</td>
+				<td>{{fila.Inf_Prof.cursos}}</td>
+			</tr>
+		</table>
+	</div>
+	</div>    
+</div>
+<div id="section10" class="container-fluid">
+<div ng-controller="controlador10">
+	<div class="well">
+		<center><b>LEER JSON MEDIANTE URL</b></center>
+		<form>
+			<input type="text" name="id" placeholder="ID" ng-model="idE"></input>
+			<input type="text" name="nombre" placeholder="Ingrese el Nombre" ng-model="nombreE"></input>
+			<input type="text" name="autor" placeholder="Ingrese el Autor" ng-model="autorE"></input>
+			<input type="text" name="precio" placeholder="Ingrese el Preio" ng-model="precioE"></input>
+			<input type="text" name="cantidad" placeholder="Ingrese la Cantidad" ng-model="cantidadE"></input>
+			<a href="" ng-click="agregar()"><input type="submit" value="AGREGAR"></input></a>
+			<br>
+			<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+		</form>			
+	</div>
+		<table class="table table-hover">
+			<tr>
+				<th>ID</th>
+				<th><a href="" ng-click="ordenar('nombre')">
+					NOMBRES</a>
+				</th>
+				<th>AUTOR</th>
+				<th>PRECIO</th>
+				<th>CANTIDAD</th>
+				<th>IMAGEN</th>	
+				<th colspan="12"><center>VENTAS POR MES</center></th>
+				<th>Suma</th>
+			</tr>
+			<tr ng-repeat="datos in lista.books | orderBy:ordenado | filter:busqueda">
+				<td>{{datos.id}}</td>
+				<td>{{datos.name}}</td>
+				<td>{{datos.author}}</td>
+				<td>{{datos.price}}</td>
+				<td>{{datos.amount}}</td>
+				<td><img src="{{datos.url}}" width="50px" height="50px"></td>
+				<td ng-repeat="datos2 in datos.salesPerMonth">
+					{{datos2.month}}<br>{{datos2.amount}}
+				</td>
+				<td>aqui va la suma</td>
+			</tr>
+			<tr ng-repeat="datos in diccionario">
+				<td>{{datos.id}}</td>
+				<td>{{datos.nombre}}</td>
+				<td>{{datos.autor}}</td>
+				<td>{{datos.precio}}</td>
+				<td>{{datos.cantidad}}</td>
+			</tr>		
+		</table>
+</div>
+</div>-->    
+
+<div ng-view></div>
+</body>
+</html>

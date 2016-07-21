@@ -1,0 +1,34 @@
+<br><br><br><br>
+	<center><h4 class="alert alert-info"><strong>PRACTICA #4</strong></h4></center>
+	<div ng-controller="controlador4">
+		<div class="well">
+		<center><h3>INGRESO DE DATOS</h3><br></center>
+			<form ng-submit="AgregarListado()">
+				<input type="text" name="nombre" placeholder="Nombre" ng-model="NombreEntrada"></input>
+				<input type="text" name="telefono" placeholder="Telefono" ng-model="TelefonoEntrada"></input>
+				<select ng-model="MateriaEntrada">
+					<option>Programación Avanzada</option>
+					<option>Arquitectura de Computadoras</option>
+					<option>Contabilidad de Costos</option>
+					<option>Ética Profesional</option>
+				</select>
+				<input type="submit" value="Agregar"></input><br><br>
+				<label>Buscar:</label>
+				<input type="text" ng-model="bus" placeholder="Buscar "></input>
+			</form>
+		</div>
+		
+		<table class="table table-condensed">
+			<tr>
+				<td><b><a href="" ng-click="OrdenarListado('nombre')">Nombres</a></td>
+				<td><b>Telefono</td>
+				<td><b><a href="" ng-click="OrdenarListado('materia')">Materia</a></td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:bus">
+				<td>{{fila.nombre | uppercase}}</td>
+				<td>{{fila.telefono}}</td>
+				<td>{{fila.materia | uppercase}}</td>
+			</tr>
+		</table>
+		<a href="" ng-click="EliminarListado()">Eliminar Listado</a>
+	</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practica 2</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="js/practica2.js"></script>
+</head>
+<body ng-app="primero">
+	<div ng-controller="controlador">
+		{{nombre}}<br>
+		{{lista}}<br>
+		{{lista[1]}}<br><br>
+		{{diccionario}}<br>
+		<div ng-repeat="fila in diccionario">
+			{{fila.materia}} con {{fila.credito}} creditos<br>
+		</div>
+	</div>
+</body>
+</html>

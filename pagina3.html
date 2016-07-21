@@ -1,0 +1,13 @@
+<br><br><br><br>
+<center><h4 class="alert alert-info"><strong>PRACTICA #3</strong></h4></center>
+<div ng-controller="controlador3">
+	<br>
+		<form ng-submit="AgregarNombre()">
+			<input type="text" name="nombre" ng-model="NombreEntrada"></input>
+			<input type="submit" value="Agregar"></input>
+		</form>
+	<div ng-repeat="fila in diccionario">
+		{{fila.nombre}}
+	</div>
+		<a href="" ng-click="EliminarNombre()">Eliminar Nombres</a>
+</div>

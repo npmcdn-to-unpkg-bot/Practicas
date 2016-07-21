@@ -1,0 +1,24 @@
+<br><br><br><br>
+<center><h4 class="alert alert-info"><strong>PRACTICA #9</strong></h4></center>
+	<div ng-controller="controlador9">
+	<div class="well">
+		<center><strong>LECTURA DE ARCHIVO JSON "DOC" HTTP</strong></center>
+	</div>
+		<table class="table table-condensed">			
+			<tr>
+				<td><b>NOMBRES</b></td>
+				<td><b>APELLIDOS</b></td>
+				<td><b>PROFESION</b></td>
+				<td><b>ESTUDIOS</b></td>
+				<td><b>CURSOS</b></td>
+			</tr>
+			<tr ng-repeat="fila in datos"> 
+				<!--aqui van los datos del documento json-->
+				<td>{{fila.Inf_Per.nombre}}</td>
+				<td>{{fila.Inf_Per.apellido}}</td>
+				<td>{{fila.Inf_Prof.profesion}}</td>
+				<td>{{fila.Inf_Prof.estudios}}</td>
+				<td>{{fila.Inf_Prof.cursos}}</td>
+			</tr>
+		</table>
+	</div>

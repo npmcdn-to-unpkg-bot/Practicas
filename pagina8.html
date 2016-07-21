@@ -1,0 +1,23 @@
+<br><br><br><br>
+<center><h4 class="alert alert-info"><strong>PRACTICA #8</strong></h4></center>
+<div ng-controller="controlador8">		
+		<div class="well">
+			<center><b>DATOS DEL ARCHIVO JSON "DATOS" RESOURCE</b>	</center>
+		</div>	
+		<table class="table table-condensed">		
+			<tr>
+				<th>ID</th>
+				<th>NOMBRES</th>
+				<th>APELLIDOS</th>
+				<th>TELEFONO</th>
+				<th>MATERIA</th>
+			</tr>
+			<tr ng-repeat="datos in lista">
+				<td>{{datos.Id}}</td>
+				<td>{{datos.nombres}}</td>
+				<td>{{datos.apellidos}}</td>
+				<td>{{datos.telefono}}</td>
+				<td>{{datos.materia}}</td>
+			</tr>
+		</table>		
+	</div>

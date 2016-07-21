@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<title>Practica 6</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="js/practica6.js"></script>
+ 
+</head>
+<body ng-app="formulario">
+	<div ng-controller="controlador">
+		<div class="container">
+			<center><h3>INGRESO DE DATOS</h3><br>
+			<button ng-click="ShowForm()" ng-hide="formVisibility"> Añadir contacto </button></center>
+				<div ng-show="formVisibility">
+					<form>
+						<input type="text" name="nombres" placeholder="Ingrese el nombre" ng-model="nombreEntrada"></input>
+						<input type="text" name="telefono" placeholder="Ingrese el telefono" ng-model="telefonoEntrada"></input>
+							<select ng-model="materiaEntrada">
+								<option>Eliga una materia</option>
+								<option>Programacion Avanzada</option>
+								<option>Arquitectura de Computadoras</option>
+								<option>Estadistica Inferencial</option>
+								<option>Contabilidad</option>
+								<option>Etica Profesional</option>
+							</select> 
+						<a href="" ng-click="agregar()"><input type="submit" value="AGREGAR"></input></a>
+						<br>
+						<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+					</form>
+				</div>							
+		</div><br>
+		<table class="table table-hover">
+			<tr>
+				<td><b><a href="" ng-click="ordenar('nombres')">NOMBRES</a></b></td>
+				<td><b>TELEFONO</b></td>
+				<td><b><a href="" ng-click="ordenar('materia')">MATERIA</a></b></td>
+				<td><b>OPCIONES</b></td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:busqueda">
+				<td><b>{{fila.nombres|uppercase}}</b></td>
+				<td><b>{{fila.telefono}}</b></td>
+				<td><b>{{fila.materia|uppercase}}</b></td>
+				<td><b>Opciones</b></td>
+			</tr>
+		</table>
+	</div>		
+</body>
+</html>

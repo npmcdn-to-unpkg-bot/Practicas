@@ -1,0 +1,20 @@
+[
+    {"Inf_Per":{"nombre": "Israel Gerardo",
+			    "apellido": "Parra Ruiz"},
+	"Inf_Prof":{"profesion":"Programador Web",
+				"estudios":"UTPL",
+	    		"cursos":"Tecnologias AJAX"}
+	},
+	{"Inf_Per":{"nombre": "Alex Daniel",
+			    "apellido": "Castillo Betancourt"},
+	"Inf_Prof":{"profesion":"BDA",
+				"estudios":"UNL",
+	    		"cursos":"Oracle"}
+	},
+	{"Inf_Per":{"nombre": "Alex Ruben",
+			    "apellido": "Condoy Carrion"},
+	"Inf_Prof":{"profesion":"Desarrollador de Software",
+				"estudios":"UNL",
+	    		"cursos":"OpenSource"}
+	} 	
+]

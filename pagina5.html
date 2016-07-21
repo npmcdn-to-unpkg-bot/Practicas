@@ -1,0 +1,35 @@
+<br><br><br><br>
+<center><h4 class="alert alert-info"><strong>PRACTICA #5</strong></h4></center>
+	<div ng-controller="controlador5">
+		<div class="well">
+			<center><h3>INGRESO DE DATOS</h3><br></center>
+					<form>
+						<input type="text" name="nombres" placeholder="Ingrese el nombre" ng-model="nombreEntrada"></input>
+						<input type="text" name="telefono" placeholder="Ingrese el telefono" ng-model="telefonoEntrada"></input>
+							<select ng-model="materiaEntrada">
+								<option>Eliga una materia</option>
+								<option>Programacion Avanzada</option>
+								<option>Arquitectura de Computadoras</option>
+								<option>Estadistica Inferencial</option>
+								<option>Contabilidad</option>
+								<option>Etica Profesional</option>
+							</select> 
+						<button ng-click="agregar()" ng-disabled="!telefonoEntrada">AGREGAR</button>
+						<br>
+						<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+					</form>		
+		</div><br>
+		<table class="table table-condensed">
+			<tr>
+				<td><b><a href="" ng-click="ordenar('nombres')">NOMBRES</a></b></td>
+				<td><b>TELEFONO</b></td>
+				<td><b><a href="" ng-click="ordenar('materia')">MATERIA</a></b></td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:ordenado | filter:busqueda">
+				<td>{{fila.nombres|uppercase}}</td>
+				<td>{{fila.telefono}}</td>
+				<td>{{fila.materia|uppercase}}</td>
+				
+			</tr>
+		</table>
+	</div>		

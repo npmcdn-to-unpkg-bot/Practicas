@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+  <datospersonales>
+       <nombres-apellidos>ALAVA GARCIA KENIA ANDREINA</nombres-apellidos>
+       <cedula>1313281493</cedula>
+       <fechanacimiento>22 de julio de 1993</fechanacimiento>
+       <direccion>Ciudadela California, calle 3 de mayo y santana</direccion>
+       <telefono>0985483348</telefono>
+       <correo>kenya_2207@outlook.com</correo>
+  </datospersonales>
+  <estudios>
+       <primarios>Escuela Mixta Libertad</primarios>
+       <secundarios>Colegio Técnico "Uruguay"-Comercialización de Compra y Ventas</secundarios>
+       <terciarios>Univeridad Técnica de Manabí-Facultad de Ciencias Informáticas</terciarios>
+  </estudios>
+  <cursos>
+      <curso1>Curso de Computación-Cainicomput, 2 años</curso1>
+  </cursos>
+  <talleres>
+      <taller1>Manuela Cañizares-Ingresos de datos de personas Discapacitadas</taller1>
+  </talleres>
+   <honores>
+      <primero>Mensión de Honor, mejores califiaciones en 5 curso Bachillerato-2010</primero>
+      <segundo>Mensión de Honor, mejores califiaciones en 6 curso Bachillerato-2011</segundo>
+  </honores>
+  <experiencialaborales>
+       <clinica>
+            <nombre>Clínica Metropolitana</nombre>
+            <cargo>Reemplazo de la Secretaria del Doctor Vera</cargo>
+            <tiempo>Tiempo solicitado</tiempo>
+       </clinica>
+       <coop>
+            <nombre1>Cooperativa 15 de abril</nombre1>
+            <cargo1>Asistente de Agente de Crédito</cargo1>
+            <tiempo1>3 meses</tiempo1>
+       </coop>
+       <bus>
+            <nombre2>Cooperativa Ciudad del Valle</nombre2>
+            <cargo2>Cajera</cargo2>
+            <tiempo2>2 años y medio</tiempo2>
+       </bus>
+  </experiencialaborales>
+  <referenciaspersonales>
+       <primer>
+            <nom>Mayra García Cevallos</nom>
+            <phono>0976835545</phono>
+            <car>Secretaria de Consultorio Médico</car>
+            <dir>Calle Washiton, callejón Queen</dir>
+       </primer>
+       <segundoo>
+            <nom2>Nuvia Garcia Cevallos</nom2>
+            <phono2>0987543355</phono2>
+            <car2>Secretaria</car2>
+            <dir2>Calle Washiton</dir2>
+       </segundoo>
+       <tercero>
+            <nom3>Yokasta Carrión Garcia</nom3>
+            <phono3>0987855554</phono3>
+            <car3>Abogada</car3>
+            <dir3>Calle Washiton, frente a al Comerdor La Ramada</dir3>
+       </tercero>
+  </referenciaspersonales>
+</curriculum> 
+    
+      

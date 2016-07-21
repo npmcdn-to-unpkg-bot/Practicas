@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Lectura Xml</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		if(window.XMLHttpRequest){
+			xmlhttp=new XMLHttpRequest();
+		}else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xmlhttp.open("GET","quintoa.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		var quintoa=xmlDoc.getElementsByTagName('estudiante');
+
+		for (var i=0;i<quintoa.length; i++) {
+			var nombres=quintoa[i].getElementsByTagName("nombres")[0].childNodes[0].nodeValue
+			var apellidos=quintoa[i].getElementsByTagName("apellidos")[0].childNodes[0].nodeValue
+			var cedula=quintoa[i].getElementsByTagName("cedula")[0].childNodes[0].nodeValue
+			var genero=quintoa[i].getElementsByTagName("genero")[0].childNodes[0].nodeValue
+			var fecha_nacimiento=quintoa[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].anio
+			var fecha_nacimiento_mes=quintoa[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].mes
+			var fecha_nacimiento_dia=quintoa[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].dia
+
+			document.whrite(nombres);
+			document.whrite(apellidos);
+			document.whrite(cedula);
+			document.whrite(genero);
+			document.whrite(fecha_nacimiento);
+			document.whrite(fecha_nacimiento_mes);
+			document.whrite(fecha_nacimiento_dia);
+		}
+	</script>
+</head>
+<body>
+	<h1>Lectura de alumnos de 5to "A"</h1>
+
+	<script>
+
+		if(window.XMLHttpRequest){
+			xmlhttp=new XMLHttpRequest();
+		}else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xmlhttp.open("GET","quintoa.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		var quintoa=xmlDoc.getElementsByTagName('estudiante');
+
+		for (var i=0;i<quintoa.length; i++) {
+			nombres=quintoa[i].getElementsByTagName("nombres")[0].childNodes[0].nodeValue
+			apellidos=quintoa[i].getElementsByTagName("apellidos")[0].childNodes[0].nodeValue
+			cedula=quintoa[i].getElementsByTagName("cedula")[0].childNodes[0].nodeValue
+			genero=quintoa[i].getElementsByTagName("genero")[0].childNodes[0].nodeValue
+			fecha_nacimiento=[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].anio
+			fecha_nacimiento=[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].mes
+			fecha_nacimiento=[i].getElementsByTagName("fecha_nacimiento")[0].childNodes[0].dia
+
+			document.whrite(nombres);
+			document.whrite(apellidos);
+			document.whrite(cedula);
+			document.whrite(genero);
+			document.whrite(fecha_nacimiento);
+		}
+	</script>
+	
+	<!--<?php 
+		/*if(file_exists("quintoa.xml")){
+			$quintoa=simplexml_load_file("quintoa.xml");
+		
+			foreach ($quintoa->estudiante as $estudiante){
+					echo "<p>".$estudiante->nombres."</p>";
+			}
+		}
+		else{
+			exit("No se pudo cargar el archivo quintoa.xml");
+		}
+	*/?>-->
+</body>
+</html>

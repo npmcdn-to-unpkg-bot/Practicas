@@ -1,0 +1,33 @@
+﻿<!ELEMENT curriculum (datospersonales, estudios, cursos, talleres, honores, experiencialaborales, referenciaspersonales)>
+<!ELEMENT datospersonales (nombres-apellidos, cedula, fechanacimiento, direccion, telefono, correo)>
+<!ELEMENT nombres-apellidos (#PCDATA)>
+<!ELEMENT cedula (#PCDATA)>
+<!ELEMENT fechanacimiento (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT estudios (primarios, secundarios, terciarios)>
+<!ELEMENT primarios (#PCDATA)>
+<!ELEMENT secundarios (#PCDATA)>
+<!ELEMENT terciarios (#PCDATA)>
+<!ELEMENT cursos (curso1)>
+<!ELEMENT curso1 (#PCDATA)>
+<!ELEMENT talleres (taller1)>
+<!ELEMENT taller1 (#PCDATA)>
+<!ELEMENT honores (primero+)>
+<!ELEMENT primero (#PCDATA)>
+<!ELEMENT experiencialaborales (clinica, coop, bus)>
+<!ELEMENT clinica (nombre, cargo, tiempo)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+<!ELEMENT coop (nombre, cargo, tiempo)>
+<!ELEMENT bus (nombre, cargo, tiempo)>
+<!ELEMENT referenciaspersonales (primer, segundo, tercero)>
+<!ELEMENT primer (nombre2, phono, cargo2, dir)>
+<!ELEMENT nombre2 (#PCDATA)>
+<!ELEMENT phono (#PCDATA)>
+<!ELEMENT cargo2 (#PCDATA)>
+<!ELEMENT dir (#PCDATA)>
+<!ELEMENT segundo (nombre2, phono, cargo2, dir)>
+<!ELEMENT tercero (nombre2, phono, cargo2, dir)>

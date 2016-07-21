@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Practica8</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-resource.js"></script>
+	<script src="js/practica8.js"></script>
+	<script src="js/datos.json"></script>	
+</head>
+
+<body ng-app="app">
+<center><h4 class="alert alert-info"><strong>PRACTICA #8</strong></h4></center>
+<div ng-controller="controlador">		
+		<div class="well">
+			<center><b>DATOS DEL ARCHIVO JSON "DATOS" RESOURCE</b>	</center>
+			<form ng-submit="AgregarListado()">
+				<input type="text" name="id" placeholder="ID" ng-model="idE"></input>
+				<input type="text" name="nombre" placeholder="Ingrese el Nombre" ng-model="nombreE"></input>
+				<input type="text" name="apellido" placeholder="Ingrese el apellido" ng-model="apellidoE"></input>
+				<input type="text" name="telefono" placeholder="Ingrese el telefono" ng-model="telfonoE"></input>
+				<input type="text" name="materia" placeholder="Ingrese la materia" ng-model="materiaE"></input>
+				<br>
+				<label><strong>BUSCAR:</strong></label>
+				<input type="text" name="buscar" placeholder="Buscar" ng-model="busqueda"></input>
+				<br>
+				<input type="submit" value="Agregar"></input><br><br>
+				<button ng-click="eliminar()">ELIMINAR</button>
+			</form>
+		</div>	
+		<table class="table table-condensed">		
+			<tr>
+				<th>ID</th>
+				<td><b><a href="" ng-click="OrdenarListado('nombre')">Nombres</a></td>
+				<th>APELLIDOS</th>
+				<th>TELEFONO</th>
+				<th>MATERIA</th>
+			</tr>
+			<tr ng-repeat="datos in lista | orderBy:ordenado | filter:busqueda">
+				<td>{{datos.Id}}</td>
+				<td>{{datos.nombres}}</td>
+				<td>{{datos.apellidos}}</td>
+				<td>{{datos.telefono}}</td>
+				<td>{{datos.materia}}</td>
+			</tr>
+		</table>		
+	</div>
+</body>
+
+</html>

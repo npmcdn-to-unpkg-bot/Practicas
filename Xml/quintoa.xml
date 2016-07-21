@@ -1,0 +1,27 @@
+<quintoa>
+	<estudiante>
+		<nombres>Johnny Fabián </nombres>
+		<apellidos> Gonzáles Guamán </apellidos>
+		<cedula>1150036125</cedula>
+		<genero>m</genero>
+		<fecha_nacimiento anio="1994" mes="octubre" dia="28"></fecha_nacimiento>
+	</estudiante>
+
+
+	<estudiante>
+		<nombres>María José </nombres>
+		<apellidos> Ojeda Bazaran </apellidos>
+		<cedula>1150281234</cedula>
+		<genero>f</genero>
+		<fecha_nacimiento anio="1995" mes="junio" dia="5"></fecha_nacimiento>
+	</estudiante>
+
+
+	<estudiante>
+		<nombres>Edwin René </nombres>
+		<apellidos> Guamán Quinche </apellidos>
+		<cedula>1104097553</cedula>
+		<genero>m</genero>
+		<fecha_nacimiento anio="1982" mes="mayo" dia="30"></fecha_nacimiento>
+	</estudiante>
+</quintoa>

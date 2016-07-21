@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Mi primer practica</title>
+	<script src="angular/angular.min.js"></script>
+</head>
+<body>
+	{{"Hola quinto A"}}
+	<div>
+		<label>Nombre: </label>
+		<input type="text" ng-model="nombre"></input><br>
+		<label>Apellido: </label>
+		<input type="text" ng-model="apellido"></input><br>
+		<label>Cedula: </label>
+		<input type="text" ng-model="cedula"></input><br>
+		<label>Tú estas ingresando el nombre: {{nombre}} {{apellido}} con el numero de cedula {{cedula}}</label>
+	</div>
+</body>
+</html>

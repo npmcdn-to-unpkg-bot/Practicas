@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo de Bootstrap y xml con Javascript</title>
+	<meta name="viewport ">
+  	<link rel="stylesheet" type="text/css" href="estilos/bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="estilos/bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+	<th> <br></th>
+	<div class="container">
+	<h1>CURRICULUM VITAE</h1>	
+	
+	<script>
+		if (window.XMLHttpRequest) {
+			xmlhttp=new XMLHttpRequest();//invocar una conexion en firefox,chrome,safari
+
+		}else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //conexion con explorer
+		}	
+		//abrir el enlace con el documento 
+		xmlhttp.open("GET","xml/curriculum.xml",false);
+		xmlhttp.send();
+		var documento = xmlhttp.responseXML;
+		var curri = documento.getElementsByTagName("curriculum");
+		
+		if (curri.length>0) {
+			//DATOS PERSONALES
+			var dt_nombre_ape = curri[0].getElementsByTagName("nombres-apellidos")[0].childNodes[0].nodeValue;
+			var dt_cedula = curri[0].getElementsByTagName("cedula")[0].childNodes[0].nodeValue;
+			var dt_fecha_nac = curri[0].getElementsByTagName("fechanacimiento")[0].childNodes[0].nodeValue;
+			var dt_direccion = curri[0].getElementsByTagName("direccion")[0].childNodes[0].nodeValue;
+			var dt_telefono = curri[0].getElementsByTagName("telefono")[0].childNodes[0].nodeValue;
+			var dt_correo = curri[0].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
+			//ESTUDIOS
+			var est_primarios = curri[0].getElementsByTagName("primarios")[0].childNodes[0].nodeValue;
+			var est_secundarios = curri[0].getElementsByTagName("secundarios")[0].childNodes[0].nodeValue;
+			var est_terciarios = curri[0].getElementsByTagName("terciarios")[0].childNodes[0].nodeValue;
+			//CURSOS
+			var cu_curso1 = curri[0].getElementsByTagName("curso1")[0].childNodes[0].nodeValue;
+			//TALLERES
+			var ta_taller1 = curri[0].getElementsByTagName("taller1")[0].childNodes[0].nodeValue;
+			//HONORES
+			var hn_primero = curri[0].getElementsByTagName("primero")[0].childNodes[0].nodeValue;
+			var hn_segundo = curri[0].getElementsByTagName("segundo")[0].childNodes[0].nodeValue;
+			//EXPERIENCIAS LABORALES - CLINICA
+			var cli_nombre = curri[0].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+			var cli_cargo = curri[0].getElementsByTagName("cargo")[0].childNodes[0].nodeValue;
+			var cli_tiempo = curri[0].getElementsByTagName("tiempo")[0].childNodes[0].nodeValue;
+			//EXPERIENCIAS LABORALES - COOPERATIVA
+			var coop_nombre = curri[0].getElementsByTagName("nombre1")[0].childNodes[0].nodeValue;
+			var coop_cargo = curri[0].getElementsByTagName("cargo1")[0].childNodes[0].nodeValue;
+			var coop_tiempo = curri[0].getElementsByTagName("tiempo1")[0].childNodes[0].nodeValue;
+			//EXPERIENCIAS LABORALES - BUS
+			var bus_nombre = curri[0].getElementsByTagName("nombre2")[0].childNodes[0].nodeValue;
+			var bus_cargo = curri[0].getElementsByTagName("cargo2")[0].childNodes[0].nodeValue;
+			var bus_tiempo = curri[0].getElementsByTagName("tiempo2")[0].childNodes[0].nodeValue;
+			//REFERENCIAS PERSONALES - PRIMER
+			var pri_nombre = curri[0].getElementsByTagName("nom")[0].childNodes[0].nodeValue;
+			var pri_telefono = curri[0].getElementsByTagName("phono")[0].childNodes[0].nodeValue;
+			var pri_cargo = curri[0].getElementsByTagName("car")[0].childNodes[0].nodeValue;
+			var pri_direccion = curri[0].getElementsByTagName("dir")[0].childNodes[0].nodeValue;
+			// REFERENCIAS PERSONALES - SEGUNDO
+			var seg_nombre = curri[0].getElementsByTagName("nom2")[0].childNodes[0].nodeValue;
+			var seg_telefono = curri[0].getElementsByTagName("phono2")[0].childNodes[0].nodeValue;
+			var seg_cargo = curri[0].getElementsByTagName("car2")[0].childNodes[0].nodeValue;
+			var seg_direccion = curri[0].getElementsByTagName("dir2")[0].childNodes[0].nodeValue;
+			//REFERENCIAS PERSONALES - TERCERO
+			var ter_nombre = curri[0].getElementsByTagName("nom3")[0].childNodes[0].nodeValue;
+			var ter_telefono = curri[0].getElementsByTagName("phono3")[0].childNodes[0].nodeValue;
+			var ter_cargo = curri[0].getElementsByTagName("car3")[0].childNodes[0].nodeValue;
+			var ter_direccion = curri[0].getElementsByTagName("dir3")[0].childNodes[0].nodeValue;
+
+			document.write("<h4  class='lead'> DATOS PERSONALES</h4>");
+			document.write("<div class='derecha'>");
+			document.write("<img src='imagenes/Kenia' class='img-thumbnail'>");
+			document.write("</div>");
+				document.write("<h4>");
+				document.write(dt_nombre_ape);
+				document.write("</h4>");
+				document.write("<h5>");
+				document.write(dt_cedula);
+				document.write("</h5>");
+				document.write("<h5>");
+				document.write(dt_fecha_nac);
+				document.write("</h5>");
+				document.write("<h5>");
+				document.write(dt_direccion);
+				document.write("</h5>");
+				document.write("<h4>");
+				document.write(dt_correo);
+				document.write("</h4>");
+				document.write("<h5>");
+				document.write(dt_telefono);
+				document.write("</h5>");
+			document.write("<h4  class='lead'> ESTUDIOS REALIZADOS</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Primarios:");
+				document.write("</td><td>");
+				document.write(est_primarios);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Secundarios:");
+				document.write("</td><td>");
+				document.write(est_secundarios);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Educacion Superior:");
+				document.write("</td><td>");
+				document.write(est_terciarios);
+				document.write("</td></tr>");
+			document.write("</table>");
+
+			document.write("<h4 class='lead'>CURSOS REALIZADOS</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Curso:");
+				document.write("</td><td>");
+				document.write(cu_curso1);
+				document.write("</td></tr>");
+			document.write("</table>");
+
+			document.write("<h4 class='lead'>TALLERES REALIZADOS</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Taller:");
+				document.write("</td><td>");
+				document.write(ta_taller1);
+				document.write("</td></tr>");
+			document.write("</table>");
+
+			document.write("<h4 class='lead'> HONORES</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Mensión de Honor 1:");
+				document.write("</td><td>");
+				document.write(hn_primero);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Mensión de Honor 2:");
+				document.write("</td><td>");
+				document.write(hn_segundo);
+				document.write("</td></tr>");
+			document.write("</table>");
+
+			document.write("<h4  class='lead'>EXPERIENCIAS LABORALES</h4>");
+			document.write("<h4>CLINICA</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombre:");
+				document.write("</td><td>");
+				document.write(cli_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(cli_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Horarios de Trabajo:");
+				document.write("</td><td>");
+				document.write(cli_tiempo);
+				document.write("</td></tr>");					
+			document.write("</table>");
+
+			document.write("<h4>COOPERATIVA 1</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombre:");
+				document.write("</td><td>");
+				document.write(coop_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(coop_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Horarios de Trabajo:");
+				document.write("</td><td>");
+				document.write(coop_tiempo);
+				document.write("</td></tr>");		
+			document.write("</table>");
+
+			document.write("<h4>COOPERATIVA 2</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombre:");
+				document.write("</td><td>");
+				document.write(bus_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(bus_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Horarios de Trabajo:");
+				document.write("</td><td>");
+				document.write(bus_tiempo);
+				document.write("</td></tr>");			
+			document.write("</table>");
+			
+			document.write("<h4 class='lead'>REFERENCIAS PERSONALES</h4>");
+			document.write("<h4>REFERENCIA 1</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombres y Apellidos:");
+				document.write("</td><td>");
+				document.write(pri_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Telefono:");
+				document.write("</td><td>");
+				document.write(pri_telefono);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(pri_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Direccion:");
+				document.write("</td><td>");
+				document.write(pri_direccion);
+				document.write("</td></tr>");
+			document.write("</table>");
+
+			document.write("<h4>  REFERENCIA 2</h4><hr>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombres y Apellidos:");
+				document.write("</td><td>");
+				document.write(seg_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Telefono:");
+				document.write("</td><td>");
+				document.write(seg_telefono);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(seg_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Direccion:");
+				document.write("</td><td>");
+				document.write(seg_direccion);
+				document.write("</td></tr>");
+			document.write("</table>");
+			document.write("<h4>REFERENCIA 3<hr></h4>");
+			document.write("<table class='table'>");
+				document.write("<tr><td>");
+				document.write("Nombres y Apellidos:");
+				document.write("</td><td>");
+				document.write(ter_nombre);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Telefono:");
+				document.write("</td><td>");
+				document.write(ter_telefono);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Cargo:");
+				document.write("</td><td>");
+				document.write(ter_cargo);
+				document.write("</td></tr>");
+				document.write("<tr><td>");
+				document.write("Direccion:");
+				document.write("</td><td>");
+				document.write(ter_direccion);
+				document.write("</td></tr>");
+			document.write("</table>");
+		}else{
+			document.write("<h2>No tengo datos del curriculum</h2>");
+		}
+	</script>
+	</div>
+	<th> <br></th>
+</body>
+</html>

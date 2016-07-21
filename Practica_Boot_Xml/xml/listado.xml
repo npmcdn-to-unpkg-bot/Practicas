@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<listado>
+    <materia nombre="Sistemas Distribuido" profesor="Rene Guaman Quinche">
+      <alumno>
+        <nombres-apellidos>ALAVA GARCIA KENIA ANDREINA</nombres-apellidos>
+        <genero>f</genero>
+        <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>15</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ALCIVAR MERA CARLOS ISAIAS</nombres-apellidos>
+        <genero>m</genero>
+        <foto></foto>
+        <notas>
+          <varios>2</varios>
+          <proyecto>15</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ALMEIDA LOOR YORDY EDWIN</nombres-apellidos>
+        <genero>m</genero>
+        <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>15</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>AVILES LOPEZ HENRY DAVID</nombres-apellidos>
+        <genero>m</genero>
+        <foto></foto>
+        <notas>
+          <varios>15</varios>
+          <proyecto>10</proyecto>
+          <examen>5</examen>
+        </notas>
+      </alumno>
+      <alumno>
+      <nombres-apellidos>AYALA CARRILLO JUAN ALBERTO</nombres-apellidos>
+      <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>5</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>BERMEO MURILLO ANGELA ELIZABETH</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>4</proyecto>
+          <examen>7</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>BRAVO BARAHONA GISELLA PATRICIA</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>10</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>BRAVO PARRAGA MANUEL ENRIQUE</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>15</varios>
+          <proyecto>15</proyecto>
+          <examen>15</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>CAMPOVERDE CEDEÑO JENNIFER LISSETE</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>1</varios>
+          <proyecto>15</proyecto>
+          <examen>2</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>GILER VILLAGOMEZ RICARDO DAVID</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>15</proyecto>
+          <examen>15</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>GONZALEZ GONZALEZ ENRIQUE FRANCISCO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>0</varios>
+          <proyecto>15</proyecto>
+          <examen>0</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>GONZALEZ LOOR ANGIE LISSELY</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>8</varios>
+          <proyecto>8</proyecto>
+          <examen>5</examen>
+        </notas>
+      </alumno>
+      <alumno>
+      <nombres-apellidos>INTRIAGO MACIAS DIEGO JOSE</nombres-apellidos>
+      <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>15</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MACIAS PALMA CRISTHIAN OSWALDO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>12</varios>
+          <proyecto>14</proyecto>
+          <examen>15</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MACIAS ZAMBRANO GEISLER GERMAN</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>5</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MEJIA CHERE LUIS FERNANDO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>1</varios>
+          <proyecto>12</proyecto>
+          <examen>1</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MENDIETA MUÑOZ RENÉ JACINTO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>18</varios>
+          <proyecto>15</proyecto>
+          <examen>8</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MENDOZA BRAVO ANDREA AURY</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>4</varios>
+          <proyecto>11</proyecto>
+          <examen>12</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MENDOZA LOPEZ XAVIER ISRAEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>3</varios>
+          <proyecto>8</proyecto>
+          <examen>14</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MEZA CEVALLOS JEAN PIERRE</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>13</varios>
+          <proyecto>20</proyecto>
+          <examen>7</examen>
+        </notas>
+      </alumno>
+      <alumno>
+      <nombres-apellidos>MOLINA CUENCA KAREN ANDREA</nombres-apellidos>
+      <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>17</varios>
+          <proyecto>13</proyecto>
+          <examen>11</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MUÑOZ MERA JOSE MIGUEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>1</proyecto>
+          <examen>17</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>MURILLO PANTA VERONICA KARINA</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>11</varios>
+          <proyecto>10</proyecto>
+          <examen>9</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>OSTAIZA PINARGOTE HARRY DANIEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>15</proyecto>
+          <examen>15</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>PINARGOTE ZAMBRANO JOSE DANIEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>15</proyecto>
+          <examen>11</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>RIVERA DELGADO CLAUDIA XIOMARA</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>6</varios>
+          <proyecto>11</proyecto>
+          <examen>3</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ROMERO PONCE KARLA LISCETH</nombres-apellidos>
+        <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>0</varios>
+          <proyecto>1</proyecto>
+          <examen>0</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>VELEZ SANCHEZ JOSE MANUEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>8</varios>
+          <proyecto>18</proyecto>
+          <examen>15</examen>
+        </notas>
+      </alumno>
+      <alumno>
+      <nombres-apellidos>VILLAFUERTE MACIAS LOURDES ROCIO</nombres-apellidos>
+      <genero>f</genero>
+      <foto></foto>
+        <notas>
+          <varios>20</varios>
+          <proyecto>15</proyecto>
+          <examen>10</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ZAMBRANO CEVALLOS MIGUEL ANGEL</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>2</varios>
+          <proyecto>14</proyecto>
+          <examen>13</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ZAMBRANO GUEVARA JUNIOR ALEJANDRO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>4</varios>
+          <proyecto>5</proyecto>
+          <examen>9</examen>
+        </notas>
+      </alumno>
+      <alumno>
+        <nombres-apellidos>ZAMBRANO SOLORZANO JESUS ALBERTO</nombres-apellidos>
+        <genero>m</genero>
+      <foto></foto>
+        <notas>
+          <varios>10</varios>
+          <proyecto>12</proyecto>
+          <examen>13</examen>
+        </notas>
+      </alumno>
+  </materia>
+</listado>

@@ -1,0 +1,38 @@
+<cicloacademico>
+
+	<materia>
+		<nombre>Estadistica Inferencial </nombre>
+		<docente>Ing. Marco Ocampo </docente>
+		<numerohoras>96 </numerohoras>
+		<inf_adicional cadena="No" creditos="6"></inf_adicional>
+	</materia>
+
+	<materia>
+		<nombre> Contabilidad de Costos </nombre>
+		<docente> Dra. Maria Gaona </docente>
+		<numerohoras> 80 </numerohoras>
+		<inf_adicional cadena="No" creditos="5"></inf_adicional>
+	</materia>
+
+	<materia>
+		<nombre> Arquitectura de Computadores </nombre>
+		<docente> Ing. Mario Cueva </docente>
+		<numerohoras> 160 </numerohoras>
+		<inf_adicional cadena="Si" creditos="10"></inf_adicional>
+	</materia>
+
+	<materia>
+		<nombre> Programacion Avanzada </nombre>
+		<docente> Ing. René Guamán</docente>
+		<numerohoras> 160 </numerohoras>
+		<inf_adicional cadena="No" creditos="10"></inf_adicional>
+	</materia>
+
+	<materia>
+		<nombre> Etica Profesional </nombre>
+		<docente> Dra. Mercy Feijó</docente>
+		<numerohoras> 80 </numerohoras>
+		<inf_adicional cadena="No" creditos="5"></inf_adicional>
+	</materia>
+
+</cicloacademico>
