@@ -38,6 +38,14 @@ app.config(function($routeProvider) {
 			controller:'controlador10',
 			templateUrl:'pagina10.html'
 		})
+		/*.when('/pg11',{
+			controller:'controlador11',
+			templateUrl:'pagina11.html'
+		})*/
+		.when('/pg12',{
+			controller:'controlador12',
+			templateUrl:'pagina12.html'
+		})
 		.otherwise({
 			redirectTo:'/index.html'
 		});
@@ -62,6 +70,21 @@ app.factory('listados',function($resource){
 app.factory('listado',function($resource){
 	return $resource('https://whispering-woodland-9020.herokuapp.com/getAllBooks');
 });
+//factory para el controlador 11
+//factory para el controlador 12
+app.factory("datos_cliente",['$resource',function($resource){
+ 	return $resource('http://127.0.0.1:8000/api/cliente/',{},{get:{method:'GET',pararms:{}, isArray:true}});
+ 	}
+])
+app.factory("datos_cuenta",['$resource',function($resource){
+ 	return $resource('http://127.0.0.1:8000/api/cuenta/',{},{get:{method:'GET',pararms:{}, isArray:true}});
+ 	}
+])
+app.factory("datos_transaccion",['$resource',function($resource){
+ 	return $resource('http://127.0.0.1:8000/api/transaccion/',{},{get:{method:'GET',pararms:{}, isArray:true}});
+ 	}
+])
+
 
 //AQUI SE ADMINISTRA LOS CONTROLADORES DE LOS JS
 app.controller('controlador2',function($scope,listaNombres){
@@ -190,6 +213,13 @@ app.controller('controlador10',function($scope,listado){
 			console.log($scope,formVisibility)
 		};
 	
+});
+
+app.controller("controlador12",function($scope,datos_cuenta,datos_cliente,datos_transaccion){
+	$scope.mensaje ="saludos";
+	$scope.lista_cliente= datos_cliente.get();
+	$scope.lista_cuenta= datos_cuenta.get();
+	$scope.lista_transaccion= datos_transaccion.get();
 });
 
 function verificar($scope){
